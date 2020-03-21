@@ -5,7 +5,8 @@
     "lambda-build": "netlify-lambda build lambda-src",
     "build": "NODE_ENV=production webpack && npm run lambda-build",
     "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"npm run lambda-serve\"",
-    "test": "echo 'No tests are currently configured.'"
+    "test": "echo 'No tests are currently configured.'",
+	"postinstall": "netlify-lambda install"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
